@@ -7,10 +7,11 @@ Node will provide RESTful API. Angular provides the frontend and accessablity to
 ***
 
 ```
+.
 ├── README.md
-├── bower.json  					
+├── bower.json
 ├── client						#frontend res
-│   ├── css		
+│   ├── css
 │   ├── img
 │   ├── js 						#code for angular
 │   │   ├── controllers
@@ -21,13 +22,14 @@ Node will provide RESTful API. Angular provides the frontend and accessablity to
 │   │   ├── javascript.html       #compress all js refs
 │   │   └── stylesheets.html      #compress all css refs
 │   └── views
-├── config                       
+├── config
 │   └── db.js
+├── main.js
 ├── package.json
-├── server  						#server apis
-│   ├── models
-│   └── routes.js
-└── main.js
+└── server
+    ├── middlewares
+    ├── models
+    └── routes
 ```
   
 ###Requirements And Tools
