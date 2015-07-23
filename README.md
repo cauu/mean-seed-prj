@@ -24,7 +24,7 @@ Node will provide RESTful API. Angular provides the frontend and accessablity to
 ├── config                       
 │   └── db.js
 ├── package.json
-├── server 						#server apis
+├── main.js  						#server apis
 │   ├── models
 │   └── routes.js
 └── server.js
