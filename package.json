@@ -1,0 +1,12 @@
+{
+  "name": "mean-seed-prj",
+  "main": "server.js",
+  "dependencies": {
+    "bower": "latest",
+    "express": "latest",
+    "mongoose": "latest",
+    "body-parser": "latest",
+    "method-override": "latest", 
+    "gulp": "latest"
+  }
+}
