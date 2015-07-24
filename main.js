@@ -32,7 +32,10 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/client')); 
 
 // routes ==================================================
-require('./app/routes')(app); // configure our routes
+//require('./app/routes')(app); // configure our routes
+var router = require('./server/routes/index');
+
+app.use('/api', router);
 
 // start app ===============================================
 // startup our app at http://localhost:8080
