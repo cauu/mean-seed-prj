@@ -2,17 +2,12 @@
 
 var express = require('express');
 var router = express.Router();
+var oauth = require('../middlewares/auth');
 
 var route = function (app) {
-    app.use('/api', router);
+    app.use('/api/v1', router);
 
     router.use('/user', require('./user'));
-
-    router.route('/')
-        .get(function (req, res) {
-            console.log('api router is starting');
-            res.json('bye');
-        });
 }
 
 module.exports = route;

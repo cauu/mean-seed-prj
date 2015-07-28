@@ -2,11 +2,12 @@
   "name": "mean-seed-prj",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "latest",
     "bower": "latest",
     "express": "latest",
+    "gulp": "latest",
+    "method-override": "latest",
     "mongoose": "latest",
-    "body-parser": "latest",
-    "method-override": "latest", 
-    "gulp": "latest"
+    "oauth2-server": "^2.4.1"
   }
 }

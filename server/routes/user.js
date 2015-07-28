@@ -2,36 +2,26 @@ var express = require('express');
 var router = express.Router();
 
 var user = require('../models/user');
+var oauth = require('../middlewares/auth');
+var errorHandler = require('../middlewares/err_handler');
 
 //add middlewares here 
 //eg. router.use('/', require('../middlewares/auth.js'));
 
-router.post('/register', function (req, res) {
-    user.create(req.body.tel, 
-        req.body.hashed_password, 
+router.post('/register', function (req, res, next) {
+    user.create(req.body.username, 
+        req.body.password, 
         function (err, user) {
             if (err) {
               //TODO: return err
-              res.json(err);
+              next(err);
             }
             else {
               res.json(user);
             }
         });
-});
+}, errorHandler);
 
-router.get('/login', function (req, res) {
-    user.authenticate(req.query.tel, 
-        req.query.hashed_password, 
-        function (err, user) {
-            if (err) {
-                //TODO: return err
-                res.json(err);
-            }
-            else {
-               res.json(user);
-            }
-        });
-});
+router.all('/login', oauth.grant(), errorHandler);
 
 module.exports = router;
