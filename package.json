@@ -3,7 +3,6 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "latest",
-    "bower": "latest",
     "express": "latest",
     "gulp": "latest",
     "method-override": "latest",
